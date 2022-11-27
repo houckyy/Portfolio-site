@@ -7,17 +7,25 @@
     <title>Houckyy - Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/2c671a2108.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
+    <div id="contact" class="contact-alert" style="display: flex;">
+        <button class="exit" onclick="con_close()"><i class="fa-solid fa-xmark"></i></button>
+        <div id="inner" class="inner-contact" style="right: 0px; opacity: 1;">
+            <h1>Contact Information</h1>
+            <p><i class="fa-brands fa-discord"></i> Houckyy#5265</p>
+        </div>
+    </div>
     <div class="about">
         <div class="img">
         <img class="about-img" src="images/2lrvpzyu.bmp" alt="" srcset="">
         </div>
         <div class="about-txt">
             <h2>About Houckyy</h2>
-            <p>I'm Houckyy, I design and make cheap logos, backrounds, and other artistic elements. Some of my work is shown below. feel free to contact me on discord houckyy#5265 for affordable and clean comissions.</p>
+            <p>I'm Houckyy, I design and make cheap logos, backrounds, and other artistic elements. Some of my work is shown below. feel free to contact me for affordable and clean comissions.</p>
             <div class="btns">
-                <a href="" class="btn"><i class="fa-solid fa-address-card"></i> Contact</a>
+                <button style="padding: 7px;" onclick="contact()" class="btn"><i class="fa-solid fa-address-card"></i> Contact</button>
                 <a href="" class="btn"><i class="fa-brands fa-youtube"></i> YouTube</a>
                 <a href="" class="btn"><i class="fa-brands fa-tiktok"></i> TikTok</a>
             </div>
@@ -53,9 +61,21 @@
             <p class="logo-title">Crecent</p>
         </div>
         <div class="grid-item">
-            <div style="background-image: url(images/)" class="item-img"></div>
-            <p class="logo-title">Unknown</p>
+            <div style="background-image: url(images/lotus.png)" class="item-img"></div>
+            <p class="logo-title">Lotus</p>
+        </div>
+        <div class="grid-item">
+            <div style="background-image: url(images/paaladin.png)" class="item-img"></div>
+            <p class="logo-title">Paladin</p>
+        </div>
+        <div class="grid-item">
+            <div style="background-image: url(images/triangle.png)" class="item-img"></div>
+            <p class="logo-title">Spin</p>
         </div>
     </div>
+    
+    <p style="text-align: center;">Website Made By <a target="_blank" href="https://raidlucky.github.io/Projects/">Lucky</a></p>
+    <script src="main.js"></script>
+    <script src="anime.min.js"></script>
 </body>
 </html>

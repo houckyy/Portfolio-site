@@ -29,6 +29,10 @@ body, html {
 
 .btns {
     margin-top: 25px;
+    max-width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn {
@@ -38,6 +42,17 @@ body, html {
     padding: 5px;
     border-radius: 5px;
     font-weight: 400;
+    transition: all 0.3s ease;
+    border: none;
+    max-width: 120px;
+    font-size: 17px;
+    text-align: center;
+    cursor: pointer;
+    margin-inline: 5px;
+}
+
+.btn:hover {
+    background-color: #44c5ce;
 }
 
 .img {
@@ -65,8 +80,9 @@ body, html {
     grid-template-columns: auto auto auto auto;
     margin-top: 50px;
     margin-bottom: 50px;
-    grid-gap: 50px;
+    grid-gap: 30px;
     justify-content: space-evenly;
+    grid-auto-rows: 375px;
 }
 
 .grid-item {
@@ -75,7 +91,6 @@ body, html {
     height: 350px;
     border-radius: 8px;
     display: flex;
-    overflow: hidden;
     flex-direction: column;
 }
 
@@ -92,4 +107,146 @@ body, html {
     font-weight: 600;
     text-align: center;
     font-size: 30px;
+}
+
+.contact-alert {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: fixed;
+    margin: 0px;
+    background-color: rgba(0, 0, 0, 0.233);
+    backdrop-filter: blur(3px);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.exit {
+    position: absolute;
+    font-size: 25px;
+    top: 0;
+    right: 0;
+    background-color: #fff0;
+    border: none;
+    color: #e74545;
+    margin-top: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.inner-contact {
+    background-color: white;
+    max-width: 600px;
+    border-radius: 8px;
+    color: #313131;
+    padding: 20px;
+    right: 200px;
+    position: relative;
+    opacity: 0;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1525px) and (min-width: 200px) {
+    .grid-item {
+        width: 300px !important;
+        height: 300px !important;
+    }
+}
+
+@media only screen and (max-width: 1332px) and (min-width: 200px) {
+    .grid-item {
+        width: 250px !important;
+        height: 250px !important;
+    }
+}
+
+@media only screen and (max-width: 1146px) and (min-width: 200px) {
+    .logo-grid {
+        grid-template-columns: auto auto auto !important;
+    }
+}
+
+@media only screen and (max-width: 848px) and (min-width: 200px) {
+    .grid-item {
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    .logo-grid {
+        grid-auto-rows: 250px !important;
+    }
+
+    .about {
+        width: 80% !important;
+        flex-direction: column;
+    }
+
+    .about-txt > h2, .about-txt > p{
+        text-align: center;
+    }
+
+    .btns {
+        margin-inline: auto;
+        max-width: 320px !important;
+    }
+}
+
+@media only screen and (max-width: 703px) and (min-width: 200px) {
+    .grid-item {
+        width: 175px !important;
+        height: 175px !important;
+    }
+
+    .logo-title {
+        font-size: 20px !important;
+    }
+
+
+}
+
+@media only screen and (max-width: 603px) and (min-width: 200px) {
+    .logo-grid {
+        grid-template-columns: auto auto !important;
+        grid-auto-rows: 200px !important;
+    }
+
+    .grid-item {
+        width: 200px !important;
+        height: 200px  !important;
+    }
+
+    .logo-title {
+        font-size: 22px !important;
+    }
+}
+
+@media only screen and (max-width: 468px) and (min-width: 200px) {
+    .grid-item {
+        width: 165px !important;
+        height: 165px !important;
+    }
+
+    .btn {
+        font-size: 15px !important;
+    }
+}
+
+@media only screen and (max-width: 375px) and (min-width: 200px) {
+    .grid-item {
+        width: 140px !important;
+        height: 140px !important;
+    }
+}
+
+@media only screen and (max-width: 319px) and (min-width: 200px) {
+    .logo-grid {
+        grid-template-columns: auto !important;
+    }
+
+    .grid-item {
+        width: 200px !important;
+        height: 200px !important;
+    }
 }
