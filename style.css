@@ -5,6 +5,7 @@
     --secondary: #f5f0f6;
     --background: #f7f7f7;
     --dark: #293132;
+    --dark-text: #444c57;
 }
 
 body, html {
@@ -29,7 +30,7 @@ body, html {
 
 .btns {
     margin-top: 25px;
-    max-width: 320px;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +46,7 @@ body, html {
     transition: all 0.3s ease;
     border: none;
     max-width: 120px;
-    font-size: 17px;
+    font-size: 16px;
     text-align: center;
     cursor: pointer;
     margin-inline: 5px;
@@ -148,6 +149,91 @@ body, html {
     text-decoration: none;
 }
 
+.purchase-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 80%;
+    margin-inline: auto;
+    color: var(--dark-text);
+    border-radius: 8px;
+    padding: 8px;
+    justify-content: center;
+}
+
+form > h1 {
+    text-align: center;
+    border-bottom: solid 1px #cccc;
+    width: 50%;
+    margin-inline: auto;
+}
+
+form > h2 {
+    text-align: center;
+}
+
+.purchase-txt {
+    display: block;
+    resize: none;
+    width: 65%;
+    border: none;
+    border: solid 1px #ccc;
+    height: 60px;
+    font-size: 18px;
+    font-family: 'Montserrat';
+    color: var(--background-dark);
+    margin-inline: auto;
+    border-radius: 5px;
+}
+
+.purchase-txt:focus {
+    outline: none;
+    border: solid 1px #2389ff;
+}
+
+.purchase-input {
+    display: block;
+    margin: 5px;
+      margin-top: 5px;
+    margin-top: 20px;
+    width: 300px;
+    height: 30px;
+    font-size: 18px;
+    margin-inline: auto;
+    border-radius: 4px;
+    background-color: #fff;
+    border: solid 1px #cccccc;
+    color: #545454;
+}
+
+.sub-btn {
+    background-color: #293132;
+    color: #fff;
+    border: none;
+    margin-inline: auto;
+    padding: 10px;
+    width: 30%;
+    margin-block: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sub-btn:hover {
+    background-color: #222829;
+}
+
+#paypal {
+    margin-inline: auto;
+    margin-block: 20px;
+}
+
+.purchase-input:focus {
+    border: solid 1px #2389ff !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    outline: none;
+}
 @media only screen and (max-width: 1525px) and (min-width: 200px) {
     .grid-item {
         width: 300px !important;

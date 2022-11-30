@@ -22,3 +22,30 @@ function con_close() {
     });
         setTimeout(() => {div.style.display = "none";}, 250);
 }
+
+function purchase() {
+    let paymentAmount = '10';
+    document.getElementById('purchase').style.display = 'none'
+    paypal.Buttons({
+        createOrder: function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: paymentAmount,
+                    }
+                }]
+            });
+        },
+            onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+               document.getElementById('myForm').submit()
+                alert('Transaction completed by ' + details.payer.name.given_name)
+            });
+        }
+    }).render('#paypal')
+}
+
+
+
+
+
